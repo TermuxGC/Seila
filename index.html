@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Loading...</title>
+</head>
+<body>
+
+<script>
+fetch("/log", {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({
+        ua: navigator.userAgent,
+        platform: navigator.platform,
+        res: screen.width + "x" + screen.height,
+        lang: navigator.language
+    })
+});
+</script>
+
+</body>
+</html>
